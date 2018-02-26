@@ -3,12 +3,13 @@ const merge = require('deepmerge');
 
 module.exports = (neutrino, opts = {}) => {
   const modules = opts.modules || true;
-  const modulesTest = opts.modulesTest || neutrino.regexFromExtensions(['module.css']);
+  const modulesTest = opts.modulesTest || /\.local.s?css$/;
   const options = merge({
-    test: neutrino.regexFromExtensions(['css']),
+    test: /\.s?css$/,
     ruleId: 'style',
     styleUseId: 'style',
     cssUseId: 'css',
+    cssLoader: 'css-loader',
     css: {
       importLoaders: opts.loaders ? opts.loaders.length : 0
     },
@@ -58,7 +59,7 @@ module.exports = (neutrino, opts = {}) => {
         useId: options.styleUseId
       },
       {
-        loader: require.resolve('css-loader'),
+        loader: require.resolve(options.cssLoader),
         options: options.css,
         useId: options.cssUseId
       },

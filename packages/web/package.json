@@ -9,7 +9,7 @@
     "web",
     "hot module reload"
   ],
-  "author": "Konstantin Alekseev <konstantin@kotify.com",
+  "author": "Konstantin Alekseev <konstantin@kotify.com>",
   "license": "MPL-2.0",
   "publishConfig": {
     "access": "public"

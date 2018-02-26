@@ -1,8 +1,7 @@
 const htmlLoader = require('@neutrinojs/html-loader');
-const styleLoader = require('@neutrinojs/style-loader');
+const styleLoader = require('@kotify/style-loader');
 const fontLoader = require('@neutrinojs/font-loader');
 const imageLoader = require('@neutrinojs/image-loader');
-const compileLoader = require('@neutrinojs/compile-loader');
 const env = require('@neutrinojs/env');
 const hot = require('@neutrinojs/hot');
 const htmlTemplate = require('@neutrinojs/html-template');
@@ -21,7 +20,7 @@ const { optimize } = require('webpack');
 const MODULES = join(__dirname, 'node_modules');
 
 module.exports = (neutrino, opts = {}) => {
-  const publicPath = opts.publicPath || './';
+  const publicPath = opts.publicPath || '/';
   const options = merge({
     publicPath,
     env: [],
@@ -44,11 +43,9 @@ module.exports = (neutrino, opts = {}) => {
       paths: [neutrino.options.output]
     },
     minify: {
-      babel: {},
       style: {},
       image: false
     },
-    babel: {},
     targets: {},
     font: {},
     image: {}
@@ -66,55 +63,20 @@ module.exports = (neutrino, opts = {}) => {
     };
   }
 
-  if (!options.targets.node && !options.targets.browsers) {
-    options.targets.browsers = [
-      'last 2 Chrome versions',
-      'last 2 Firefox versions',
-      'last 2 Edge versions',
-      'last 2 Opera versions',
-      'last 2 Safari versions',
-      'last 2 iOS versions'
-    ];
-  }
-
   Object.assign(options, {
     style: options.style && merge(options.style, {
       extract: options.style.extract === true ? {} : options.style.extract
     }),
     minify: options.minify && merge(options.minify, {
-      babel: options.minify.babel === true ? {} : options.minify.babel,
       style: options.minify.style === true ? {} : options.minify.style,
       image: options.minify.image === true ? {} : options.minify.image
-    }),
-    babel: compileLoader.merge({
-      plugins: [
-        ...(options.polyfills.async ? [[require.resolve('fast-async'), { spec: true }]] : []),
-        require.resolve('babel-plugin-syntax-dynamic-import')
-      ],
-      presets: [
-        [require.resolve('babel-preset-env'), {
-          debug: neutrino.options.debug,
-          modules: false,
-          useBuiltIns: true,
-          exclude: options.polyfills.async ? ['transform-regenerator', 'transform-async-to-generator'] : [],
-          targets: options.targets
-        }]
-      ]
-    }, options.babel)
-  });
+    })
+  })
 
   const staticDir = join(neutrino.options.source, 'static');
 
   neutrino.use(env, options.env);
   neutrino.use(htmlLoader);
-  neutrino.use(compileLoader, {
-    include: [
-      neutrino.options.source,
-      neutrino.options.tests
-    ],
-    exclude: [staticDir],
-    babel: options.babel
-  });
 
   Object
     .keys(neutrino.options.mains)
