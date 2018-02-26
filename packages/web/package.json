@@ -1,6 +1,6 @@
 {
-  "name": "@neutrinojs/web",
-  "version": "8.1.1",
+  "name": "@kotify/web",
+  "version": "0.1.0",
   "description": "Neutrino preset for building generic web applications",
   "main": "index.js",
   "keywords": [
@@ -9,11 +9,8 @@
     "web",
     "hot module reload"
   ],
-  "author": "Eli Perelman <eli@eliperelman.com>",
+  "author": "Konstantin Alekseev <konstantin@kotify.com",
   "license": "MPL-2.0",
-  "repository": "https://github.com/mozilla-neutrino/neutrino-dev/tree/master/packages/web",
-  "homepage": "https://neutrino.js.org",
-  "bugs": "https://github.com/mozilla-neutrino/neutrino-dev/issues",
   "publishConfig": {
     "access": "public"
   },
@@ -39,7 +36,7 @@
     "@neutrinojs/image-loader": "^8.1.1",
     "@neutrinojs/loader-merge": "^8.1.1",
     "@neutrinojs/minify": "^8.1.1",
-    "@neutrinojs/style-loader": "^8.1.1",
+    "@kotify/style-loader": "^0.1.0",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "babel-preset-env": "^1.6.0",
     "deepmerge": "^1.5.2",

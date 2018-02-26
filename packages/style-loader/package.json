@@ -1,6 +1,6 @@
 {
-  "name": "@neutrinojs/style-loader",
-  "version": "8.1.1",
+  "name": "@kotify/style-loader",
+  "version": "0.1.0",
   "description": "Neutrino middleware for importing and loading stylesheets from modules",
   "main": "index.js",
   "keywords": [
@@ -10,11 +10,8 @@
     "css",
     "stylesheet"
   ],
-  "author": "Eli Perelman <eli@eliperelman.com>",
+  "author": "Konstantin Alekseev <konstantin@kotify.com",
   "license": "MPL-2.0",
-  "repository": "https://github.com/mozilla-neutrino/neutrino-dev/tree/master/packages/style-loader",
-  "homepage": "https://neutrino.js.org",
-  "bugs": "https://github.com/mozilla-neutrino/neutrino-dev/issues",
   "publishConfig": {
     "access": "public"
   },

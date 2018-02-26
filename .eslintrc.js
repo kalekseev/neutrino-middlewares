@@ -1,4 +1,4 @@
-const { Neutrino } = require('./packages/neutrino');
+const { Neutrino } = require('neutrino');
 
 module.exports = Neutrino()
   .use('.neutrinorc.js')
