@@ -1,10 +1,13 @@
 {
   "name": "@kotify/neutrino-utils",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "index.js",
   "author": "Konstantin Alekseev <konstantin@kotify.com>",
   "private": false,
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "peerDependencies": {
     "neutrino": "^8.0.0"
   }

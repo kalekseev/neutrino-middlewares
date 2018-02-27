@@ -1,9 +1,12 @@
 {
   "name": "@kotify/neutrino-typescript-loader",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "index.js",
   "license": "MIT",
   "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "awesome-typescript-loader": "^3.4.1",
     "deepmerge": "^2.0.1",

@@ -1,6 +1,6 @@
 {
   "name": "@kotify/neutrino-web",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Neutrino preset for building generic web applications",
   "main": "index.js",
   "private": false,
@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "@kotify/neutrino-style-loader": "^0.1.1",
-    "@kotify/neutrino-utils": "^0.1.1",
+    "@kotify/neutrino-utils": "^0.1.2",
     "@neutrinojs/chunk": "^8.1.1",
     "@neutrinojs/clean": "^8.1.1",
     "@neutrinojs/compile-loader": "^8.1.1",
