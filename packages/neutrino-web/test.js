@@ -13,16 +13,18 @@ test('uses preset', () => {
 });
 
 test('valid preset production', () => {
-  const api = Neutrino({ env: { NODE_ENV: 'production' } });
+  const api = Neutrino({ env: { NODE_ENV: 'production' }, command: 'build' });
   api.use(mw());
   const config = api.config.toConfig();
   const errors = validate(config);
   expect(errors.length).toBe(0);
+  // const { printConfig } = require('@kotify/neutrino-utils');
+  // printConfig(api);
   expect(config).toMatchSnapshot()
 });
 
 test('valid preset development', () => {
-  const api = Neutrino({ 'env': { NODE_ENV: 'development' } });
+  const api = Neutrino({ env: { NODE_ENV: 'development' }, command: 'start' });
   api.use(mw());
   const config = api.config.toConfig();
   const errors = validate(config);

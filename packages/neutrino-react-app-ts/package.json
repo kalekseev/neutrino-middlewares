@@ -1,5 +1,5 @@
 {
-  "name": "neutrino-react-app-ts",
+  "name": "@kotify/neutrino-react-app-ts",
   "version": "0.1.0",
   "main": "index.js",
   "author": "Konstantin Alekseev <konstantin@kotify.com>",
@@ -7,7 +7,12 @@
   "private": false,
   "dependencies": {
     "@kotify/neutrino-react-typescript": "^0.1.0",
-    "deepmerge": "^2.0.1"
+    "autoprefixer": "^8.0.0",
+    "deepmerge": "^2.0.1",
+    "postcss-flexbugs-fixes": "^3.3.0",
+    "postcss-loader": "^2.1.1",
+    "sass-loader": "^6.0.6",
+    "uglifyjs-webpack-plugin": "^1.2.2"
   },
   "peerDependencies": {
     "neutrino": "^8.0.0"

@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "main": "index.js",
   "author": "Konstantin Alekseev <konstantin@kotify.com>",
+  "private": false,
   "license": "MIT",
   "peerDependencies": {
     "neutrino": "^8.0.0"

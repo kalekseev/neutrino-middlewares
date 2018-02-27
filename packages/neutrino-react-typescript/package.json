@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "main": "index.js",
   "license": "MIT",
+  "private": false,
   "dependencies": {
-    "@kotify/web": "^0.1.0",
+    "@kotify/neutrino-web": "^0.1.0",
     "@kotify/neutrino-typescript-loader": "^0.1.0",
     "deepmerge": "^2.0.1",
     "@types/react-hot-loader": "^3.0.6",

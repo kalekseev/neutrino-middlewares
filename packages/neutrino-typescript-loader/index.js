@@ -24,6 +24,15 @@ module.exports = (neutrino, options = {}) => neutrino.config
       .options(options.lint)
       .end()
     .end()
+  .rule('jsmap')
+    .test(/\.js$/)
+    .when(options.include, rule => rule.include.merge(options.include))
+    .when(options.exclude, rule => rule.exclude.merge(options.exclude))
+    .pre()
+    .use('jsmapLoader')
+      .loader(require.resolve('source-map-loader'))
+      .end()
+    .end()
   .end()
   .when(neutrino.options.command === 'start', () => {
     neutrino.config.plugin('checker').use(CheckerPlugin);

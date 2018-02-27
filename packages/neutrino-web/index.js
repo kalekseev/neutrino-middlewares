@@ -1,5 +1,5 @@
 const htmlLoader = require('@neutrinojs/html-loader');
-const styleLoader = require('@kotify/style-loader');
+const styleLoader = require('@kotify/neutrino-style-loader');
 const fontLoader = require('@neutrinojs/font-loader');
 const imageLoader = require('@neutrinojs/image-loader');
 const env = require('@neutrinojs/env');
@@ -8,7 +8,6 @@ const htmlTemplate = require('@neutrinojs/html-template');
 const chunk = require('@neutrinojs/chunk');
 const copy = require('@neutrinojs/copy');
 const clean = require('@neutrinojs/clean');
-const minify = require('@neutrinojs/minify');
 const loaderMerge = require('@neutrinojs/loader-merge');
 const devServer = require('@neutrinojs/dev-server');
 const { join, basename } = require('path');
@@ -42,10 +41,6 @@ module.exports = (neutrino, opts = {}) => {
     clean: opts.clean !== false && {
       paths: [neutrino.options.output]
     },
-    minify: {
-      style: {},
-      image: false
-    },
     targets: {},
     font: {},
     image: {}
@@ -66,10 +61,6 @@ module.exports = (neutrino, opts = {}) => {
   Object.assign(options, {
     style: options.style && merge(options.style, {
       extract: options.style.extract === true ? {} : options.style.extract
-    }),
-    minify: options.minify && merge(options.minify, {
-      style: options.minify.style === true ? {} : options.minify.style,
-      image: options.minify.image === true ? {} : options.minify.image
     })
   })
 
@@ -102,7 +93,6 @@ module.exports = (neutrino, opts = {}) => {
     .target('web')
     .context(neutrino.options.root)
     .output
-      .path(neutrino.options.output)
       .publicPath(options.publicPath)
       .filename('[name].js')
       .chunkFilename('[name].[chunkhash].js')
@@ -179,12 +169,15 @@ module.exports = (neutrino, opts = {}) => {
       neutrino.use(chunk);
 
       config
-        .when(options.minify, () => neutrino.use(minify, options.minify))
         .plugin('module-concat')
-          .use(optimize.ModuleConcatenationPlugin);
+          .use(optimize.ModuleConcatenationPlugin)
+          .end()
+        .devtool('source-map')
+        .bail(true);
     })
     .when(neutrino.options.command === 'build', (config) => {
-      config.when(options.clean, () => neutrino.use(clean, options.clean));
+      config.when(options.clean, () => neutrino.use(clean, options.clean))
+      .output.path(neutrino.options.output);
       neutrino.use(copy, {
         patterns: [{
           context: staticDir,
@@ -198,6 +191,6 @@ module.exports = (neutrino, opts = {}) => {
           .use(ManifestPlugin, [options.manifest]);
       }
 
-      config.output.filename('[name].[chunkhash].js');
+      config.output.filename('[name].[chunkhash:8].js');
     });
 };

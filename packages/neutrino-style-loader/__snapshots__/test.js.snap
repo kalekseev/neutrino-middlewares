@@ -6,7 +6,7 @@ Object {
     "rules": Array [
       Object {
         "exclude": Array [
-          /\\\\\\.local\\.s\\?css\\$/,
+          /\\\\\\.module\\.s\\?css\\$/,
         ],
         "test": /\\\\\\.s\\?css\\$/,
         "use": Array [
@@ -22,6 +22,9 @@ Object {
           },
           Object {
             "loader": "/projects/neutrino-middlewares/node_modules/style-loader/index.js",
+            "options": Object {
+              "hmr": true,
+            },
           },
           Object {
             "loader": "/projects/neutrino-middlewares/node_modules/css-loader/index.js",
@@ -32,7 +35,7 @@ Object {
         ],
       },
       Object {
-        "test": /\\\\\\.local\\.s\\?css\\$/,
+        "test": /\\\\\\.module\\.s\\?css\\$/,
         "use": Array [
           Object {
             "loader": "/projects/neutrino-middlewares/node_modules/css-hot-loader/index.js",
@@ -46,6 +49,9 @@ Object {
           },
           Object {
             "loader": "/projects/neutrino-middlewares/node_modules/style-loader/index.js",
+            "options": Object {
+              "hmr": true,
+            },
           },
           Object {
             "loader": "/projects/neutrino-middlewares/node_modules/css-loader/index.js",
@@ -85,7 +91,7 @@ Object {
     "rules": Array [
       Object {
         "exclude": Array [
-          /\\\\\\.local\\.s\\?css\\$/,
+          /\\\\\\.module\\.s\\?css\\$/,
         ],
         "test": /\\\\\\.s\\?css\\$/,
         "use": Array [
@@ -102,6 +108,7 @@ Object {
           Object {
             "loader": "/projects/neutrino-middlewares/node_modules/style-loader/index.js",
             "options": Object {
+              "hmr": true,
               "sourceMap": true,
             },
           },
@@ -115,7 +122,7 @@ Object {
         ],
       },
       Object {
-        "test": /\\\\\\.local\\.s\\?css\\$/,
+        "test": /\\\\\\.module\\.s\\?css\\$/,
         "use": Array [
           Object {
             "loader": "/projects/neutrino-middlewares/node_modules/css-hot-loader/index.js",
@@ -130,6 +137,7 @@ Object {
           Object {
             "loader": "/projects/neutrino-middlewares/node_modules/style-loader/index.js",
             "options": Object {
+              "hmr": true,
               "sourceMap": true,
             },
           },

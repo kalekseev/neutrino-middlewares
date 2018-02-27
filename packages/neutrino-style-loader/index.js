@@ -3,7 +3,7 @@ const merge = require('deepmerge');
 
 module.exports = (neutrino, opts = {}) => {
   const modules = opts.modules || true;
-  const modulesTest = opts.modulesTest || /\.local.s?css$/;
+  const modulesTest = opts.modulesTest || /\.module.s?css$/;
   const options = merge({
     test: /\.s?css$/,
     ruleId: 'style',
@@ -13,7 +13,9 @@ module.exports = (neutrino, opts = {}) => {
     css: {
       importLoaders: opts.loaders ? opts.loaders.length : 0
     },
-    style: {},
+    style: {
+      hmr: neutrino.options.command !== 'build'
+    },
     hot: true,
     hotUseId: 'hot',
     modules,
@@ -24,7 +26,7 @@ module.exports = (neutrino, opts = {}) => {
     extractId: 'extract',
     extract: {
       plugin: {
-        filename: neutrino.options.command === 'build' ? '[name].[contenthash].css' : '[name].css',
+        filename: neutrino.options.command === 'build' ? '[name].[contenthash:8].css' : '[name].css',
         ignoreOrder: opts.modules !== false,
         allChunks: true
       }

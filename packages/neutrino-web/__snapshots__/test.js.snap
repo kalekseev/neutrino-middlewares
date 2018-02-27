@@ -3,9 +3,39 @@
 exports[`valid preset development 1`] = `
 Object {
   "context": "/projects/neutrino-middlewares",
+  "devServer": Object {
+    "contentBase": "/projects/neutrino-middlewares/src",
+    "headers": Object {
+      "host": "localhost:5000",
+    },
+    "historyApiFallback": true,
+    "host": "0.0.0.0",
+    "hot": true,
+    "https": false,
+    "open": false,
+    "port": 5000,
+    "public": "localhost:5000",
+    "publicPath": "/",
+    "stats": Object {
+      "assets": false,
+      "children": false,
+      "chunks": false,
+      "colors": true,
+      "errorDetails": true,
+      "errors": true,
+      "hash": false,
+      "modules": false,
+      "publicPath": false,
+      "timings": false,
+      "version": false,
+      "warnings": true,
+    },
+  },
   "devtool": "cheap-module-eval-source-map",
   "entry": Object {
     "index": Array [
+      "/projects/neutrino-middlewares/node_modules/webpack-dev-server/client/index.js?http://localhost:5000",
+      "/projects/neutrino-middlewares/node_modules/webpack/hot/dev-server.js",
       "/projects/neutrino-middlewares/src/index",
     ],
   },
@@ -24,12 +54,15 @@ Object {
       },
       Object {
         "exclude": Array [
-          /\\\\\\.local\\.s\\?css\\$/,
+          /\\\\\\.module\\.s\\?css\\$/,
         ],
         "test": /\\\\\\.s\\?css\\$/,
         "use": Array [
           Object {
             "loader": "/projects/neutrino-middlewares/node_modules/style-loader/index.js",
+            "options": Object {
+              "hmr": true,
+            },
           },
           Object {
             "loader": "/projects/neutrino-middlewares/node_modules/css-loader/index.js",
@@ -40,10 +73,13 @@ Object {
         ],
       },
       Object {
-        "test": /\\\\\\.local\\.s\\?css\\$/,
+        "test": /\\\\\\.module\\.s\\?css\\$/,
         "use": Array [
           Object {
             "loader": "/projects/neutrino-middlewares/node_modules/style-loader/index.js",
+            "options": Object {
+              "hmr": true,
+            },
           },
           Object {
             "loader": "/projects/neutrino-middlewares/node_modules/css-loader/index.js",
@@ -146,7 +182,6 @@ Object {
     "chunkFilename": "[name].[chunkhash].js",
     "devtoolModuleFilenameTemplate": [Function],
     "filename": "[name].js",
-    "path": "/projects/neutrino-middlewares/build",
     "pathinfo": true,
     "publicPath": "/",
   },
@@ -185,6 +220,15 @@ Object {
         "title": "Webpack App",
         "xhtml": true,
       },
+    },
+    HotModuleReplacementPlugin {
+      "fullBuildTimeout": 200,
+      "multiStep": undefined,
+      "options": Object {},
+      "requestTimeout": 10000,
+    },
+    NamedModulesPlugin {
+      "options": Object {},
     },
   ],
   "resolve": Object {
@@ -200,13 +244,13 @@ Object {
     "modules": Array [
       "node_modules",
       "/projects/neutrino-middlewares/node_modules",
-      "/projects/neutrino-middlewares/packages/web/node_modules",
+      "/projects/neutrino-middlewares/packages/neutrino-web/node_modules",
     ],
   },
   "resolveLoader": Object {
     "modules": Array [
       "/projects/neutrino-middlewares/node_modules",
-      "/projects/neutrino-middlewares/packages/web/node_modules",
+      "/projects/neutrino-middlewares/packages/neutrino-web/node_modules",
     ],
   },
   "target": "web",
@@ -215,7 +259,9 @@ Object {
 
 exports[`valid preset production 1`] = `
 Object {
+  "bail": true,
   "context": "/projects/neutrino-middlewares",
+  "devtool": "source-map",
   "entry": Object {
     "index": Array [
       "/projects/neutrino-middlewares/src/index",
@@ -236,7 +282,7 @@ Object {
       },
       Object {
         "exclude": Array [
-          /\\\\\\.local\\.s\\?css\\$/,
+          /\\\\\\.module\\.s\\?css\\$/,
         ],
         "test": /\\\\\\.s\\?css\\$/,
         "use": Array [
@@ -252,6 +298,9 @@ Object {
           },
           Object {
             "loader": "/projects/neutrino-middlewares/node_modules/style-loader/index.js",
+            "options": Object {
+              "hmr": false,
+            },
           },
           Object {
             "loader": "/projects/neutrino-middlewares/node_modules/css-loader/index.js",
@@ -262,7 +311,7 @@ Object {
         ],
       },
       Object {
-        "test": /\\\\\\.local\\.s\\?css\\$/,
+        "test": /\\\\\\.module\\.s\\?css\\$/,
         "use": Array [
           Object {
             "loader": "/projects/neutrino-middlewares/node_modules/css-hot-loader/index.js",
@@ -276,6 +325,9 @@ Object {
           },
           Object {
             "loader": "/projects/neutrino-middlewares/node_modules/style-loader/index.js",
+            "options": Object {
+              "hmr": false,
+            },
           },
           Object {
             "loader": "/projects/neutrino-middlewares/node_modules/css-loader/index.js",
@@ -294,7 +346,7 @@ Object {
             "options": Object {
               "limit": 10000,
               "mimetype": "application/font-woff",
-              "name": "[name].[ext]",
+              "name": "[name].[hash].[ext]",
             },
           },
         ],
@@ -307,7 +359,7 @@ Object {
             "options": Object {
               "limit": 10000,
               "mimetype": "application/octet-stream",
-              "name": "[name].[ext]",
+              "name": "[name].[hash].[ext]",
             },
           },
         ],
@@ -318,7 +370,7 @@ Object {
           Object {
             "loader": "/projects/neutrino-middlewares/node_modules/file-loader/dist/cjs.js",
             "options": Object {
-              "name": "[name].[ext]",
+              "name": "[name].[hash].[ext]",
             },
           },
         ],
@@ -330,7 +382,7 @@ Object {
             "loader": "/projects/neutrino-middlewares/node_modules/url-loader/index.js",
             "options": Object {
               "limit": 8192,
-              "name": "[name].[ext]",
+              "name": "[name].[hash].[ext]",
             },
           },
         ],
@@ -342,7 +394,7 @@ Object {
             "loader": "/projects/neutrino-middlewares/node_modules/url-loader/index.js",
             "options": Object {
               "limit": 8192,
-              "name": "[name].[ext]",
+              "name": "[name].[hash].[ext]",
             },
           },
         ],
@@ -354,7 +406,7 @@ Object {
             "loader": "/projects/neutrino-middlewares/node_modules/url-loader/index.js",
             "options": Object {
               "limit": 8192,
-              "name": "[name].[ext]",
+              "name": "[name].[hash].[ext]",
             },
           },
         ],
@@ -377,7 +429,7 @@ Object {
   "output": Object {
     "chunkFilename": "[name].[chunkhash].js",
     "devtoolModuleFilenameTemplate": [Function],
-    "filename": "[name].js",
+    "filename": "[name].[chunkhash:8].js",
     "path": "/projects/neutrino-middlewares/build",
     "pathinfo": true,
     "publicPath": "/",
@@ -419,7 +471,7 @@ Object {
       },
     },
     ExtractTextPlugin {
-      "filename": "[name].css",
+      "filename": "[name].[contenthash:8].css",
       "id": 1,
       "options": Object {
         "allChunks": true,
@@ -427,7 +479,7 @@ Object {
       },
     },
     ExtractTextPlugin {
-      "filename": "[name].css",
+      "filename": "[name].[contenthash:8].css",
       "id": 2,
       "options": Object {
         "allChunks": true,
@@ -467,44 +519,22 @@ Object {
       "selectedChunks": undefined,
     },
     NameAllModulesPlugin {},
-    BabelMinifyPlugin {
-      "options": Object {
-        "babel": Object {
-          "transform": [Function],
-        },
-        "comments": /\\^\\\\\\*\\*!\\|@preserve\\|@license\\|@cc_on/,
-        "jsregex": /\\\\\\.js\\(\\$\\|\\\\\\?\\)/i,
-        "minifyOpts": Object {},
-        "minifyPreset": [Function],
-        "parserOpts": Object {},
-        "sourceMap": undefined,
-      },
-    },
-    OptimizeCssAssetsPlugin {
-      "lastCallInstance": LastCallWebpackPlugin {
-        "deleteAssetsMap": Object {},
-        "options": Object {
-          "assetProcessors": Array [
-            Object {
-              "phase": "compilation.optimize-chunk-assets",
-              "processor": [Function],
-              "regExp": /\\\\\\.css\\$/g,
-            },
-          ],
-          "canPrint": true,
-          "onEnd": [Function],
-          "onStart": [Function],
-        },
-      },
-      "options": Object {
-        "assetNameRegExp": /\\\\\\.css\\$/g,
-        "canPrint": true,
-        "cssProcessor": [Function],
-        "cssProcessorOptions": Object {},
-      },
-    },
     ModuleConcatenationPlugin {
       "options": Object {},
+    },
+    CleanWebpackPlugin {
+      "options": Object {
+        "allowExternal": false,
+        "dry": false,
+        "root": "/projects/neutrino-middlewares",
+        "verbose": false,
+      },
+      "paths": Array [
+        "/projects/neutrino-middlewares/build",
+      ],
+    },
+    Object {
+      "apply": [Function],
     },
   ],
   "resolve": Object {
@@ -520,13 +550,13 @@ Object {
     "modules": Array [
       "node_modules",
       "/projects/neutrino-middlewares/node_modules",
-      "/projects/neutrino-middlewares/packages/web/node_modules",
+      "/projects/neutrino-middlewares/packages/neutrino-web/node_modules",
     ],
   },
   "resolveLoader": Object {
     "modules": Array [
       "/projects/neutrino-middlewares/node_modules",
-      "/projects/neutrino-middlewares/packages/web/node_modules",
+      "/projects/neutrino-middlewares/packages/neutrino-web/node_modules",
     ],
   },
   "target": "web",

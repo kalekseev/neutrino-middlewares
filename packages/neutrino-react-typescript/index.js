@@ -1,4 +1,4 @@
-const web = require('@kotify/web');
+const web = require('@kotify/neutrino-web');
 const typescriptLoader = require('@kotify/neutrino-typescript-loader');
 const { join } = require('path');
 const merge = require('deepmerge');

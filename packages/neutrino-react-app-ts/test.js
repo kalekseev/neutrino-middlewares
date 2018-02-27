@@ -14,7 +14,7 @@ test('uses preset', () => {
 });
 
 test('valid preset production', () => {
-  const api = Neutrino({ env: { NODE_ENV: 'production' } });
+  const api = Neutrino({ env: { NODE_ENV: 'production' }, command: 'build' });
   api.use(mw());
   const config = api.config.toConfig();
   const errors = validate(config);
@@ -23,7 +23,7 @@ test('valid preset production', () => {
 });
 
 test('valid preset development', () => {
-  const api = Neutrino({ 'env': { NODE_ENV: 'development' } });
+  const api = Neutrino({ 'env': { NODE_ENV: 'development' }, command: 'start' });
   api.use(mw());
   const config = api.config.toConfig();
   const errors = validate(config);
