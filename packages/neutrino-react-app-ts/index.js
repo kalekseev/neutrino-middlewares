@@ -1,7 +1,6 @@
 const base = require('@kotify/neutrino-react-typescript');
 const merge = require('deepmerge');
 
-global.Promise = require.requireActual('bluebird');
 const appOptions =  {
   web: {
     style: {

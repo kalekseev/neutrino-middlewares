@@ -1,0 +1,534 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`valid preset development 1`] = `
+Object {
+  "context": "/projects/neutrino-middlewares",
+  "devtool": "cheap-module-eval-source-map",
+  "entry": Object {
+    "index": Array [
+      "/projects/neutrino-middlewares/src/index",
+    ],
+  },
+  "module": Object {
+    "rules": Array [
+      Object {
+        "test": /\\\\\\.\\(html\\)\\$/,
+        "use": Array [
+          Object {
+            "loader": "/projects/neutrino-middlewares/node_modules/html-loader/index.js",
+            "options": Object {
+              "name": "[name].[ext]",
+            },
+          },
+        ],
+      },
+      Object {
+        "exclude": Array [
+          /\\\\\\.local\\.s\\?css\\$/,
+        ],
+        "test": /\\\\\\.s\\?css\\$/,
+        "use": Array [
+          Object {
+            "loader": "/projects/neutrino-middlewares/node_modules/style-loader/index.js",
+          },
+          Object {
+            "loader": "/projects/neutrino-middlewares/node_modules/css-loader/index.js",
+            "options": Object {
+              "importLoaders": 0,
+            },
+          },
+        ],
+      },
+      Object {
+        "test": /\\\\\\.local\\.s\\?css\\$/,
+        "use": Array [
+          Object {
+            "loader": "/projects/neutrino-middlewares/node_modules/style-loader/index.js",
+          },
+          Object {
+            "loader": "/projects/neutrino-middlewares/node_modules/css-loader/index.js",
+            "options": Object {
+              "importLoaders": 0,
+              "modules": true,
+            },
+          },
+        ],
+      },
+      Object {
+        "test": /\\\\\\.\\(woff\\|woff2\\)\\(\\\\\\?v=\\\\d\\+\\\\\\.\\\\d\\+\\\\\\.\\\\d\\+\\)\\?\\$/,
+        "use": Array [
+          Object {
+            "loader": "/projects/neutrino-middlewares/node_modules/url-loader/index.js",
+            "options": Object {
+              "limit": 10000,
+              "mimetype": "application/font-woff",
+              "name": "[name].[ext]",
+            },
+          },
+        ],
+      },
+      Object {
+        "test": /\\\\\\.ttf\\(\\\\\\?v=\\\\d\\+\\\\\\.\\\\d\\+\\\\\\.\\\\d\\+\\)\\?\\$/,
+        "use": Array [
+          Object {
+            "loader": "/projects/neutrino-middlewares/node_modules/url-loader/index.js",
+            "options": Object {
+              "limit": 10000,
+              "mimetype": "application/octet-stream",
+              "name": "[name].[ext]",
+            },
+          },
+        ],
+      },
+      Object {
+        "test": /\\\\\\.eot\\(\\\\\\?v=\\\\d\\+\\\\\\.\\\\d\\+\\\\\\.\\\\d\\+\\)\\?\\$/,
+        "use": Array [
+          Object {
+            "loader": "/projects/neutrino-middlewares/node_modules/file-loader/dist/cjs.js",
+            "options": Object {
+              "name": "[name].[ext]",
+            },
+          },
+        ],
+      },
+      Object {
+        "test": /\\\\\\.svg\\(\\\\\\?v=\\\\d\\+\\\\\\.\\\\d\\+\\\\\\.\\\\d\\+\\)\\?\\$/,
+        "use": Array [
+          Object {
+            "loader": "/projects/neutrino-middlewares/node_modules/url-loader/index.js",
+            "options": Object {
+              "limit": 8192,
+              "name": "[name].[ext]",
+            },
+          },
+        ],
+      },
+      Object {
+        "test": /\\\\\\.\\(png\\|jpg\\|jpeg\\|gif\\|webp\\)\\(\\\\\\?v=\\\\d\\+\\\\\\.\\\\d\\+\\\\\\.\\\\d\\+\\)\\?\\$/,
+        "use": Array [
+          Object {
+            "loader": "/projects/neutrino-middlewares/node_modules/url-loader/index.js",
+            "options": Object {
+              "limit": 8192,
+              "name": "[name].[ext]",
+            },
+          },
+        ],
+      },
+      Object {
+        "test": /\\\\\\.ico\\(\\\\\\?v=\\\\d\\+\\\\\\.\\\\d\\+\\\\\\.\\\\d\\+\\)\\?\\$/,
+        "use": Array [
+          Object {
+            "loader": "/projects/neutrino-middlewares/node_modules/url-loader/index.js",
+            "options": Object {
+              "limit": 8192,
+              "name": "[name].[ext]",
+            },
+          },
+        ],
+      },
+      Object {
+        "test": /\\\\\\.\\(worker\\.js\\|worker\\.jsx\\|worker\\.vue\\|worker\\.ts\\|worker\\.tsx\\|worker\\.mjs\\)\\$/,
+        "use": Array [
+          Object {
+            "loader": "/projects/neutrino-middlewares/node_modules/worker-loader/dist/cjs.js",
+          },
+        ],
+      },
+    ],
+  },
+  "node": Object {
+    "Buffer": false,
+    "fs": "empty",
+    "tls": "empty",
+  },
+  "output": Object {
+    "chunkFilename": "[name].[chunkhash].js",
+    "devtoolModuleFilenameTemplate": [Function],
+    "filename": "[name].js",
+    "path": "/projects/neutrino-middlewares/build",
+    "pathinfo": true,
+    "publicPath": "/",
+  },
+  "plugins": Array [
+    EnvironmentPlugin {
+      "defaultValues": Object {},
+      "keys": Array [
+        "NODE_ENV",
+      ],
+    },
+    HtmlWebpackPlugin {
+      "options": Object {
+        "appMountId": "root",
+        "cache": true,
+        "chunks": Array [
+          "index",
+          "vendor",
+          "runtime",
+        ],
+        "compile": true,
+        "excludeChunks": Array [],
+        "favicon": false,
+        "filename": "index.html",
+        "hash": false,
+        "inject": false,
+        "minify": Object {
+          "collapseWhitespace": true,
+          "keepClosingSlash": true,
+          "preserveLineBreaks": true,
+          "useShortDoctype": true,
+        },
+        "mobile": true,
+        "pluginId": "html-index",
+        "showErrors": true,
+        "template": "/projects/neutrino-middlewares/node_modules/html-webpack-template/index.ejs",
+        "title": "Webpack App",
+        "xhtml": true,
+      },
+    },
+  ],
+  "resolve": Object {
+    "extensions": Array [
+      ".js",
+      ".jsx",
+      ".vue",
+      ".ts",
+      ".tsx",
+      ".mjs",
+      ".json",
+    ],
+    "modules": Array [
+      "node_modules",
+      "/projects/neutrino-middlewares/node_modules",
+      "/projects/neutrino-middlewares/packages/web/node_modules",
+    ],
+  },
+  "resolveLoader": Object {
+    "modules": Array [
+      "/projects/neutrino-middlewares/node_modules",
+      "/projects/neutrino-middlewares/packages/web/node_modules",
+    ],
+  },
+  "target": "web",
+}
+`;
+
+exports[`valid preset production 1`] = `
+Object {
+  "context": "/projects/neutrino-middlewares",
+  "entry": Object {
+    "index": Array [
+      "/projects/neutrino-middlewares/src/index",
+    ],
+  },
+  "module": Object {
+    "rules": Array [
+      Object {
+        "test": /\\\\\\.\\(html\\)\\$/,
+        "use": Array [
+          Object {
+            "loader": "/projects/neutrino-middlewares/node_modules/html-loader/index.js",
+            "options": Object {
+              "name": "[name].[ext]",
+            },
+          },
+        ],
+      },
+      Object {
+        "exclude": Array [
+          /\\\\\\.local\\.s\\?css\\$/,
+        ],
+        "test": /\\\\\\.s\\?css\\$/,
+        "use": Array [
+          Object {
+            "loader": "/projects/neutrino-middlewares/node_modules/css-hot-loader/index.js",
+          },
+          Object {
+            "loader": "/projects/neutrino-middlewares/node_modules/extract-text-webpack-plugin/dist/loader.js",
+            "options": Object {
+              "omit": 1,
+              "remove": true,
+            },
+          },
+          Object {
+            "loader": "/projects/neutrino-middlewares/node_modules/style-loader/index.js",
+          },
+          Object {
+            "loader": "/projects/neutrino-middlewares/node_modules/css-loader/index.js",
+            "options": Object {
+              "importLoaders": 0,
+            },
+          },
+        ],
+      },
+      Object {
+        "test": /\\\\\\.local\\.s\\?css\\$/,
+        "use": Array [
+          Object {
+            "loader": "/projects/neutrino-middlewares/node_modules/css-hot-loader/index.js",
+          },
+          Object {
+            "loader": "/projects/neutrino-middlewares/node_modules/extract-text-webpack-plugin/dist/loader.js",
+            "options": Object {
+              "omit": 1,
+              "remove": true,
+            },
+          },
+          Object {
+            "loader": "/projects/neutrino-middlewares/node_modules/style-loader/index.js",
+          },
+          Object {
+            "loader": "/projects/neutrino-middlewares/node_modules/css-loader/index.js",
+            "options": Object {
+              "importLoaders": 0,
+              "modules": true,
+            },
+          },
+        ],
+      },
+      Object {
+        "test": /\\\\\\.\\(woff\\|woff2\\)\\(\\\\\\?v=\\\\d\\+\\\\\\.\\\\d\\+\\\\\\.\\\\d\\+\\)\\?\\$/,
+        "use": Array [
+          Object {
+            "loader": "/projects/neutrino-middlewares/node_modules/url-loader/index.js",
+            "options": Object {
+              "limit": 10000,
+              "mimetype": "application/font-woff",
+              "name": "[name].[ext]",
+            },
+          },
+        ],
+      },
+      Object {
+        "test": /\\\\\\.ttf\\(\\\\\\?v=\\\\d\\+\\\\\\.\\\\d\\+\\\\\\.\\\\d\\+\\)\\?\\$/,
+        "use": Array [
+          Object {
+            "loader": "/projects/neutrino-middlewares/node_modules/url-loader/index.js",
+            "options": Object {
+              "limit": 10000,
+              "mimetype": "application/octet-stream",
+              "name": "[name].[ext]",
+            },
+          },
+        ],
+      },
+      Object {
+        "test": /\\\\\\.eot\\(\\\\\\?v=\\\\d\\+\\\\\\.\\\\d\\+\\\\\\.\\\\d\\+\\)\\?\\$/,
+        "use": Array [
+          Object {
+            "loader": "/projects/neutrino-middlewares/node_modules/file-loader/dist/cjs.js",
+            "options": Object {
+              "name": "[name].[ext]",
+            },
+          },
+        ],
+      },
+      Object {
+        "test": /\\\\\\.svg\\(\\\\\\?v=\\\\d\\+\\\\\\.\\\\d\\+\\\\\\.\\\\d\\+\\)\\?\\$/,
+        "use": Array [
+          Object {
+            "loader": "/projects/neutrino-middlewares/node_modules/url-loader/index.js",
+            "options": Object {
+              "limit": 8192,
+              "name": "[name].[ext]",
+            },
+          },
+        ],
+      },
+      Object {
+        "test": /\\\\\\.\\(png\\|jpg\\|jpeg\\|gif\\|webp\\)\\(\\\\\\?v=\\\\d\\+\\\\\\.\\\\d\\+\\\\\\.\\\\d\\+\\)\\?\\$/,
+        "use": Array [
+          Object {
+            "loader": "/projects/neutrino-middlewares/node_modules/url-loader/index.js",
+            "options": Object {
+              "limit": 8192,
+              "name": "[name].[ext]",
+            },
+          },
+        ],
+      },
+      Object {
+        "test": /\\\\\\.ico\\(\\\\\\?v=\\\\d\\+\\\\\\.\\\\d\\+\\\\\\.\\\\d\\+\\)\\?\\$/,
+        "use": Array [
+          Object {
+            "loader": "/projects/neutrino-middlewares/node_modules/url-loader/index.js",
+            "options": Object {
+              "limit": 8192,
+              "name": "[name].[ext]",
+            },
+          },
+        ],
+      },
+      Object {
+        "test": /\\\\\\.\\(worker\\.js\\|worker\\.jsx\\|worker\\.vue\\|worker\\.ts\\|worker\\.tsx\\|worker\\.mjs\\)\\$/,
+        "use": Array [
+          Object {
+            "loader": "/projects/neutrino-middlewares/node_modules/worker-loader/dist/cjs.js",
+          },
+        ],
+      },
+    ],
+  },
+  "node": Object {
+    "Buffer": false,
+    "fs": "empty",
+    "tls": "empty",
+  },
+  "output": Object {
+    "chunkFilename": "[name].[chunkhash].js",
+    "devtoolModuleFilenameTemplate": [Function],
+    "filename": "[name].js",
+    "path": "/projects/neutrino-middlewares/build",
+    "pathinfo": true,
+    "publicPath": "/",
+  },
+  "plugins": Array [
+    EnvironmentPlugin {
+      "defaultValues": Object {},
+      "keys": Array [
+        "NODE_ENV",
+      ],
+    },
+    HtmlWebpackPlugin {
+      "options": Object {
+        "appMountId": "root",
+        "cache": true,
+        "chunks": Array [
+          "index",
+          "vendor",
+          "runtime",
+        ],
+        "compile": true,
+        "excludeChunks": Array [],
+        "favicon": false,
+        "filename": "index.html",
+        "hash": false,
+        "inject": false,
+        "minify": Object {
+          "collapseWhitespace": true,
+          "keepClosingSlash": true,
+          "preserveLineBreaks": true,
+          "useShortDoctype": true,
+        },
+        "mobile": true,
+        "pluginId": "html-index",
+        "showErrors": true,
+        "template": "/projects/neutrino-middlewares/node_modules/html-webpack-template/index.ejs",
+        "title": "Webpack App",
+        "xhtml": true,
+      },
+    },
+    ExtractTextPlugin {
+      "filename": "[name].css",
+      "id": 1,
+      "options": Object {
+        "allChunks": true,
+        "ignoreOrder": true,
+      },
+    },
+    ExtractTextPlugin {
+      "filename": "[name].css",
+      "id": 2,
+      "options": Object {
+        "allChunks": true,
+        "ignoreOrder": true,
+      },
+    },
+    NamedModulesPlugin {
+      "options": Object {},
+    },
+    NamedChunksPlugin {
+      "nameResolver": [Function],
+    },
+    CommonsChunkPlugin {
+      "async": undefined,
+      "children": undefined,
+      "chunkNames": Array [
+        "vendor",
+      ],
+      "deepChildren": undefined,
+      "filenameTemplate": undefined,
+      "ident": "/projects/neutrino-middlewares/node_modules/webpack/lib/optimize/CommonsChunkPlugin.js0",
+      "minChunks": Infinity,
+      "minSize": undefined,
+      "selectedChunks": undefined,
+    },
+    CommonsChunkPlugin {
+      "async": undefined,
+      "children": undefined,
+      "chunkNames": Array [
+        "runtime",
+      ],
+      "deepChildren": undefined,
+      "filenameTemplate": undefined,
+      "ident": "/projects/neutrino-middlewares/node_modules/webpack/lib/optimize/CommonsChunkPlugin.js1",
+      "minChunks": undefined,
+      "minSize": undefined,
+      "selectedChunks": undefined,
+    },
+    NameAllModulesPlugin {},
+    BabelMinifyPlugin {
+      "options": Object {
+        "babel": Object {
+          "transform": [Function],
+        },
+        "comments": /\\^\\\\\\*\\*!\\|@preserve\\|@license\\|@cc_on/,
+        "jsregex": /\\\\\\.js\\(\\$\\|\\\\\\?\\)/i,
+        "minifyOpts": Object {},
+        "minifyPreset": [Function],
+        "parserOpts": Object {},
+        "sourceMap": undefined,
+      },
+    },
+    OptimizeCssAssetsPlugin {
+      "lastCallInstance": LastCallWebpackPlugin {
+        "deleteAssetsMap": Object {},
+        "options": Object {
+          "assetProcessors": Array [
+            Object {
+              "phase": "compilation.optimize-chunk-assets",
+              "processor": [Function],
+              "regExp": /\\\\\\.css\\$/g,
+            },
+          ],
+          "canPrint": true,
+          "onEnd": [Function],
+          "onStart": [Function],
+        },
+      },
+      "options": Object {
+        "assetNameRegExp": /\\\\\\.css\\$/g,
+        "canPrint": true,
+        "cssProcessor": [Function],
+        "cssProcessorOptions": Object {},
+      },
+    },
+    ModuleConcatenationPlugin {
+      "options": Object {},
+    },
+  ],
+  "resolve": Object {
+    "extensions": Array [
+      ".js",
+      ".jsx",
+      ".vue",
+      ".ts",
+      ".tsx",
+      ".mjs",
+      ".json",
+    ],
+    "modules": Array [
+      "node_modules",
+      "/projects/neutrino-middlewares/node_modules",
+      "/projects/neutrino-middlewares/packages/web/node_modules",
+    ],
+  },
+  "resolveLoader": Object {
+    "modules": Array [
+      "/projects/neutrino-middlewares/node_modules",
+      "/projects/neutrino-middlewares/packages/web/node_modules",
+    ],
+  },
+  "target": "web",
+}
+`;

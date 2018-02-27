@@ -16,10 +16,11 @@ module.exports = {
             'prettier/react'
           ]
         },
-        envs: ['browser', 'commonjs', 'node'],
+        envs: ['browser', 'commonjs', 'node', 'jest/globals'],
         plugins: [
           'eslint-plugin-prettier',
-          'eslint-plugin-react'
+          'eslint-plugin-react',
+          'jest'
         ],
         rules: {
           // Algebraic and functional types should allow capital constructors without new

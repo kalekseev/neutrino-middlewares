@@ -106,6 +106,8 @@ module.exports = (neutrino, opts = {}) => {
       .publicPath(options.publicPath)
       .filename('[name].js')
       .chunkFilename('[name].[chunkhash].js')
+      .pathinfo(true)
+      .devtoolModuleFilenameTemplate(info => join(__dirname, info.absoluteResourcePath).replace(/\\/g, '/'))
       .end()
     .resolve
       .modules

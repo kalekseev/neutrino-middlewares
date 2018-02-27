@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`valid preset development 1`] = `
+Object {
+  "module": Object {
+    "rules": Array [
+      Object {
+        "test": /\\\\\\.tsx\\?\\$/,
+        "use": Array [
+          Object {
+            "loader": "/projects/neutrino-middlewares/node_modules/awesome-typescript-loader/dist/entry.js",
+          },
+        ],
+      },
+      Object {
+        "enforce": "pre",
+        "test": /\\\\\\.tsx\\?\\$/,
+        "use": Array [
+          Object {
+            "loader": "/projects/neutrino-middlewares/node_modules/tslint-loader/index.js",
+          },
+        ],
+      },
+    ],
+  },
+}
+`;
+
+exports[`valid preset production 1`] = `
+Object {
+  "module": Object {
+    "rules": Array [
+      Object {
+        "test": /\\\\\\.tsx\\?\\$/,
+        "use": Array [
+          Object {
+            "loader": "/projects/neutrino-middlewares/node_modules/awesome-typescript-loader/dist/entry.js",
+          },
+        ],
+      },
+      Object {
+        "enforce": "pre",
+        "test": /\\\\\\.tsx\\?\\$/,
+        "use": Array [
+          Object {
+            "loader": "/projects/neutrino-middlewares/node_modules/tslint-loader/index.js",
+          },
+        ],
+      },
+    ],
+  },
+}
+`;
