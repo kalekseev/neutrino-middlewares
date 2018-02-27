@@ -1,6 +1,6 @@
 {
   "name": "@kotify/neutrino-style-loader",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Neutrino middleware for importing and loading stylesheets from modules",
   "main": "index.js",
   "private": false,
