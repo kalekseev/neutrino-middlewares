@@ -1,6 +1,6 @@
 {
   "name": "@kotify/neutrino-typescript-loader",
-  "version": "0.1.2",
+  "version": "0.1.5",
   "main": "index.js",
   "license": "MIT",
   "private": false,
@@ -12,10 +12,13 @@
     "deepmerge": "^2.0.1",
     "source-map-loader": "^0.2.3",
     "tslint": "^5.0.0",
-    "tslint-loader": "^3.5.3",
-    "typescript": "~2.6.0"
+    "tslint-loader": "^3.5.3"
+  },
+  "devDependencies": {
+    "typescript": "~2.7.0"
   },
   "peerDependencies": {
-    "neutrino": "^8.0.0"
+    "neutrino": "^8.0.0",
+    "typescript": "2.x"
   }
 }

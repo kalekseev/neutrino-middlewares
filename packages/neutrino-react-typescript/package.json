@@ -1,6 +1,6 @@
 {
   "name": "@kotify/neutrino-react-typescript",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "main": "index.js",
   "license": "MIT",
   "publishConfig": {
@@ -8,7 +8,7 @@
   },
   "private": false,
   "dependencies": {
-    "@kotify/neutrino-typescript-loader": "^0.1.2",
+    "@kotify/neutrino-typescript-loader": "^0.1.5",
     "@kotify/neutrino-web": "^0.1.4",
     "@types/react-hot-loader": "^3.0.6",
     "deepmerge": "^2.0.1",
