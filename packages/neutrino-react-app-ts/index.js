@@ -7,12 +7,18 @@ const appOptions = {
   web: {
     style: {
       cssLoader: "typings-for-css-modules-loader",
-      css: {},
+      css: {
+        sourceMap: true,
+        namedExport: true,
+        camelCase: true,
+        silent: true
+      },
       loaders: [
         {
           loader: require.resolve("postcss-loader"),
           options: {
             ident: "postcss",
+            sourceMap: true,
             plugins: () => [
               // eslint-disable-next-line global-require
               require("postcss-flexbugs-fixes"),
@@ -43,11 +49,7 @@ module.exports = (neutrino, opts = {}) => {
             style: {
               css: {
                 minimize: true,
-                sourceMap: true,
-                namedExport: true,
-                localIdentName: "[path]__[name]___[local]",
-                camelCase: true,
-                silent: true
+                localIdentName: "[path]__[name]___[local]"
               }
             }
           }

@@ -26,9 +26,6 @@ module.exports = (neutrino, opts = {}) => {
     hot: true,
     hotEntries: [],
     html: {},
-    polyfills: {
-      async: true
-    },
     devServer: {
       hot: opts.hot !== false,
       publicPath: resolve('/', publicPath)

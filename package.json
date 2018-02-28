@@ -13,7 +13,6 @@
   ],
   "scripts": {
     "build": "lerna run build",
-    "changelog": "auto-changelog --remote upstream --commit-limit false",
     "cnp": "NODE_ENV=test packages/create-project/bin/create-neutrino-project.js $(yarn random)",
     "link:all": "lerna exec yarn link",
     "lint": "neutrino lint",
@@ -27,28 +26,26 @@
     "validate:eslintrc:airbnb": "eslint --no-eslintrc --print-config . -c ./packages/airbnb/eslintrc.js > /dev/null",
     "validate:eslintrc:airbnb-base": "eslint --no-eslintrc --print-config . -c ./packages/airbnb-base/eslintrc.js > /dev/null",
     "validate:eslintrc:standardjs": "eslint --no-eslintrc --print-config . -c ./packages/standardjs/eslintrc.js > /dev/null",
-    "validate:eslintrc": "yarn validate:eslintrc:eslint && yarn validate:eslintrc:airbnb-base && yarn validate:eslintrc:airbnb && yarn validate:eslintrc:standardjs && yarn validate:eslintrc:root",
-    "version": "yarn changelog --package && git add CHANGELOG.md"
+    "validate:eslintrc": "yarn validate:eslintrc:eslint && yarn validate:eslintrc:airbnb-base && yarn validate:eslintrc:airbnb && yarn validate:eslintrc:standardjs && yarn validate:eslintrc:root"
   },
   "dependencies": {
-    "neutrino": "^8.1.1"
+    "neutrino": "^8.1.2"
   },
   "devDependencies": {
-    "@neutrinojs/airbnb-base": "^8.1.1",
-    "auto-changelog": "^1.2.2",
+    "@neutrinojs/airbnb-base": "^8.1.2",
     "babel-core": "^6.26.0",
     "babel-jest": "^22.4.1",
     "babel-preset-env": "^1.6.1",
     "eslint": "^4.18.1",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-jest": "^21.12.2",
-    "eslint-plugin-prettier": "^2.3.1",
-    "eslint-plugin-react": "^7.5.1",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.7.0",
     "husky": "^0.14.3",
     "jest": "^22.4.2",
-    "lerna": "^2.5.1",
-    "lint-staged": "^6.0.0",
-    "prettier": "^1.9.1",
+    "lerna": "^2.9.0",
+    "lint-staged": "^7.0.0",
+    "prettier": "^1.11.0",
     "regenerator-runtime": "^0.11.1"
   },
   "lint-staged": {
