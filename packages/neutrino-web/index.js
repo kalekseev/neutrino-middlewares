@@ -138,7 +138,7 @@ module.exports = (neutrino, opts = {}) => {
         envs: ['browser', 'commonjs']
       });
     })
-    .when(process.env.NODE_ENV === 'development', config => config.devtool('cheap-module-eval-source-map'))
+    .when(process.env.NODE_ENV === 'development', config => config.devtool('cheap-module-source-map'))
     .when(neutrino.options.command === 'start', (config) => {
       neutrino.use(devServer, options.devServer);
       config.when(options.hot, () => {
