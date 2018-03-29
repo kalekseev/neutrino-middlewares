@@ -26,8 +26,14 @@ module.exports = (neutrino, options = {}) => neutrino.config
     .end()
   .rule('jsmap')
     .test(/\.js$/)
-    .when(options.include, rule => rule.include.merge(options.include))
-    .when(options.exclude, rule => rule.exclude.merge(options.exclude))
+    .when(
+      options.sourceMapLoader && options.sourceMapLoader.include,
+      rule => rule.include.merge(options.sourceMapLoader.include)
+    )
+    .when(
+      options.sourceMapLoader && options.sourceMapLoader.exclude,
+      rule => rule.exclude.merge(options.sourceMapLoader.exclude)
+    )
     .pre()
     .use('jsmapLoader')
       .loader(require.resolve('source-map-loader'))
