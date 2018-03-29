@@ -1,6 +1,6 @@
 {
   "name": "@kotify/neutrino-react-app-ts",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "main": "index.js",
   "author": "Konstantin Alekseev <konstantin@kotify.com>",
   "license": "MIT",
@@ -9,7 +9,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@kotify/neutrino-react-typescript": "^0.1.8",
+    "@kotify/neutrino-react-typescript": "^0.1.9",
     "autoprefixer": "^8.0.0",
     "deepmerge": "^2.0.1",
     "node-sass": "^4.7.2",

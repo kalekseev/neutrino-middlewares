@@ -1,6 +1,6 @@
 {
   "name": "@kotify/neutrino-web",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "Neutrino preset for building generic web applications",
   "main": "index.js",
   "private": false,

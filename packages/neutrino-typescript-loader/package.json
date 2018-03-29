@@ -1,6 +1,6 @@
 {
   "name": "@kotify/neutrino-typescript-loader",
-  "version": "0.1.5",
+  "version": "0.1.9",
   "main": "index.js",
   "license": "MIT",
   "private": false,
