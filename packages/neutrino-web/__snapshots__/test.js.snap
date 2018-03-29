@@ -31,7 +31,7 @@ Object {
       "warnings": true,
     },
   },
-  "devtool": "cheap-module-eval-source-map",
+  "devtool": "cheap-module-source-map",
   "entry": Object {
     "index": Array [
       "/projects/neutrino-middlewares/node_modules/webpack-dev-server/client/index.js?http://localhost:5000",
