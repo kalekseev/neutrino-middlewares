@@ -1,6 +1,6 @@
 {
   "name": "@kotify/neutrino-react-typescript",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "main": "index.js",
   "license": "MIT",
   "publishConfig": {
