@@ -1,4 +1,6 @@
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+// eslint-disable-next-line
+const webpack = require("webpack");
 const autoprefixer = require("autoprefixer");
 const base = require("@kotify/neutrino-react-typescript");
 const merge = require("deepmerge");
@@ -84,6 +86,10 @@ module.exports = (neutrino, opts = {}) => {
         cache: true,
         sourceMap: true
       }
+    ]);
+  } else {
+    neutrino.config.plugin('watchIgnore').use(webpack.WatchIgnorePlugin, [
+      /css\.d\.ts$/
     ]);
   }
 };

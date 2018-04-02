@@ -16,6 +16,7 @@
     "postcss-flexbugs-fixes": "^3.3.0",
     "postcss-loader": "^2.1.1",
     "sass-loader": "^6.0.6",
+    "typings-for-css-modules-loader": "^1.7.0",
     "uglifyjs-webpack-plugin": "^1.2.2"
   },
   "peerDependencies": {

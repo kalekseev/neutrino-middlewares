@@ -12,8 +12,7 @@
     "@kotify/neutrino-web": "^0.1.9",
     "@types/react-hot-loader": "^3.0.6",
     "deepmerge": "^2.0.1",
-    "react-hot-loader": "^3.1.3",
-    "typings-for-css-modules-loader": "^1.7.0"
+    "react-hot-loader": "^3.1.3"
   },
   "peerDependencies": {
     "@types/react": "^16.0.38",

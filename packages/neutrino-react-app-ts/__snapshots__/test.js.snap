@@ -295,6 +295,9 @@ Object {
       "options": Object {},
     },
     CheckerPlugin {},
+    WatchIgnorePlugin {
+      "paths": /css\\\\\\.d\\\\\\.ts\\$/,
+    },
   ],
   "resolve": Object {
     "alias": Object {
