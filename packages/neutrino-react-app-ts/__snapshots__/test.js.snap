@@ -296,7 +296,9 @@ Object {
     },
     CheckerPlugin {},
     WatchIgnorePlugin {
-      "paths": /css\\\\\\.d\\\\\\.ts\\$/,
+      "paths": Array [
+        /css\\\\\\.d\\\\\\.ts\\$/,
+      ],
     },
   ],
   "resolve": Object {

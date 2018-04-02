@@ -88,8 +88,8 @@ module.exports = (neutrino, opts = {}) => {
       }
     ]);
   } else {
-    neutrino.config.plugin('watchIgnore').use(webpack.WatchIgnorePlugin, [
+    neutrino.config.plugin('watchIgnore').use(webpack.WatchIgnorePlugin, [[
       /css\.d\.ts$/
-    ]);
+    ]]);
   }
 };
