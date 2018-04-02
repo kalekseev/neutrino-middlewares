@@ -65,6 +65,13 @@ module.exports = (neutrino, opts = {}) => {
     neutrino.use(base, options);
   }
 
+  // Moment.js is an extremely popular library that bundles large locale files
+  // by default due to how Webpack interprets its code. TODO: Revisit in future.
+  // https://github.com/jmblog/how-to-optimize-momentjs-with-webpack
+  neutrino.config.plugin('ignore').use(webpack.IgnorePlugin, [
+    /^\.\/locale$/, /moment$/
+  ])
+
   if (neutrino.options.command === "build") {
     neutrino.config.plugin("uglifyjs").use(UglifyJsPlugin, [
       {

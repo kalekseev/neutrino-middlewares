@@ -295,6 +295,11 @@ Object {
       "options": Object {},
     },
     CheckerPlugin {},
+    IgnorePlugin {
+      "checkIgnore": [Function],
+      "contextRegExp": /moment\\$/,
+      "resourceRegExp": /\\^\\\\\\.\\\\/locale\\$/,
+    },
     WatchIgnorePlugin {
       "paths": Array [
         /css\\\\\\.d\\\\\\.ts\\$/,
@@ -676,6 +681,11 @@ Object {
     },
     Object {
       "apply": [Function],
+    },
+    IgnorePlugin {
+      "checkIgnore": [Function],
+      "contextRegExp": /moment\\$/,
+      "resourceRegExp": /\\^\\\\\\.\\\\/locale\\$/,
     },
     UglifyJsPlugin {
       "options": Object {
