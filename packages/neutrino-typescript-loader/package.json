@@ -8,14 +8,14 @@
     "access": "public"
   },
   "dependencies": {
-    "awesome-typescript-loader": "^3.4.1",
+    "awesome-typescript-loader": "^5.0.0",
     "deepmerge": "^2.0.1",
     "source-map-loader": "^0.2.3",
     "tslint": "^5.0.0",
     "tslint-loader": "^3.5.3"
   },
   "devDependencies": {
-    "typescript": "~2.7.0"
+    "typescript": "~2.8.3"
   },
   "peerDependencies": {
     "neutrino": "^8.0.0",

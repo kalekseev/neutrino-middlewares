@@ -29,7 +29,7 @@
     "validate:eslintrc": "yarn validate:eslintrc:eslint && yarn validate:eslintrc:airbnb-base && yarn validate:eslintrc:airbnb && yarn validate:eslintrc:standardjs && yarn validate:eslintrc:root"
   },
   "dependencies": {
-    "neutrino": "^8.1.2"
+    "neutrino": "^8.2.2"
   },
   "devDependencies": {
     "@neutrinojs/airbnb-base": "^8.1.2",

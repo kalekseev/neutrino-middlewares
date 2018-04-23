@@ -337,6 +337,7 @@ Object {
       "/projects/neutrino-middlewares/src/index",
     ],
   },
+  "mode": "production",
   "module": Object {
     "rules": Array [
       Object {
@@ -344,9 +345,6 @@ Object {
         "use": Array [
           Object {
             "loader": "/projects/neutrino-middlewares/node_modules/html-loader/index.js",
-            "options": Object {
-              "name": "[name].[ext]",
-            },
           },
         ],
       },
@@ -452,7 +450,7 @@ Object {
         "test": /\\\\\\.\\(woff\\|woff2\\)\\(\\\\\\?v=\\\\d\\+\\\\\\.\\\\d\\+\\\\\\.\\\\d\\+\\)\\?\\$/,
         "use": Array [
           Object {
-            "loader": "/projects/neutrino-middlewares/node_modules/url-loader/index.js",
+            "loader": "/projects/neutrino-middlewares/node_modules/url-loader/dist/cjs.js",
             "options": Object {
               "limit": 10000,
               "mimetype": "application/font-woff",
@@ -465,7 +463,7 @@ Object {
         "test": /\\\\\\.ttf\\(\\\\\\?v=\\\\d\\+\\\\\\.\\\\d\\+\\\\\\.\\\\d\\+\\)\\?\\$/,
         "use": Array [
           Object {
-            "loader": "/projects/neutrino-middlewares/node_modules/url-loader/index.js",
+            "loader": "/projects/neutrino-middlewares/node_modules/url-loader/dist/cjs.js",
             "options": Object {
               "limit": 10000,
               "mimetype": "application/octet-stream",
@@ -489,7 +487,7 @@ Object {
         "test": /\\\\\\.svg\\(\\\\\\?v=\\\\d\\+\\\\\\.\\\\d\\+\\\\\\.\\\\d\\+\\)\\?\\$/,
         "use": Array [
           Object {
-            "loader": "/projects/neutrino-middlewares/node_modules/url-loader/index.js",
+            "loader": "/projects/neutrino-middlewares/node_modules/url-loader/dist/cjs.js",
             "options": Object {
               "limit": 8192,
               "name": "[name].[hash].[ext]",
@@ -501,7 +499,7 @@ Object {
         "test": /\\\\\\.\\(png\\|jpg\\|jpeg\\|gif\\|webp\\)\\(\\\\\\?v=\\\\d\\+\\\\\\.\\\\d\\+\\\\\\.\\\\d\\+\\)\\?\\$/,
         "use": Array [
           Object {
-            "loader": "/projects/neutrino-middlewares/node_modules/url-loader/index.js",
+            "loader": "/projects/neutrino-middlewares/node_modules/url-loader/dist/cjs.js",
             "options": Object {
               "limit": 8192,
               "name": "[name].[hash].[ext]",
@@ -513,7 +511,7 @@ Object {
         "test": /\\\\\\.ico\\(\\\\\\?v=\\\\d\\+\\\\\\.\\\\d\\+\\\\\\.\\\\d\\+\\)\\?\\$/,
         "use": Array [
           Object {
-            "loader": "/projects/neutrino-middlewares/node_modules/url-loader/index.js",
+            "loader": "/projects/neutrino-middlewares/node_modules/url-loader/dist/cjs.js",
             "options": Object {
               "limit": 8192,
               "name": "[name].[hash].[ext]",
@@ -525,7 +523,7 @@ Object {
         "test": /\\\\\\.\\(worker\\.js\\|worker\\.jsx\\|worker\\.vue\\|worker\\.ts\\|worker\\.tsx\\|worker\\.mjs\\)\\$/,
         "use": Array [
           Object {
-            "loader": "/projects/neutrino-middlewares/node_modules/worker-loader/dist/cjs.js",
+            "loader": "/projects/neutrino-middlewares/packages/neutrino-web/node_modules/worker-loader/dist/cjs.js",
           },
         ],
       },
@@ -562,6 +560,13 @@ Object {
     "fs": "empty",
     "tls": "empty",
   },
+  "optimization": Object {
+    "runtimeChunk": "single",
+    "splitChunks": Object {
+      "chunks": "all",
+      "name": false,
+    },
+  },
   "output": Object {
     "chunkFilename": "[name].[chunkhash].js",
     "devtoolModuleFilenameTemplate": [Function],
@@ -577,21 +582,22 @@ Object {
         "NODE_ENV",
       ],
     },
+    HtmlWebpackIncludeSiblingChunksPlugin {},
     HtmlWebpackPlugin {
       "options": Object {
         "appMountId": "root",
         "cache": true,
         "chunks": Array [
           "index",
-          "vendor",
-          "runtime",
         ],
+        "chunksSortMode": "auto",
         "compile": true,
         "excludeChunks": Array [],
         "favicon": false,
         "filename": "index.html",
         "hash": false,
         "inject": false,
+        "meta": Object {},
         "minify": Object {
           "collapseWhitespace": true,
           "keepClosingSlash": true,
@@ -602,6 +608,7 @@ Object {
         "pluginId": "html-index",
         "showErrors": true,
         "template": "/projects/neutrino-middlewares/node_modules/html-webpack-template/index.ejs",
+        "templateParameters": [Function],
         "title": "Webpack App",
         "xhtml": true,
       },
@@ -621,42 +628,6 @@ Object {
         "allChunks": true,
         "ignoreOrder": true,
       },
-    },
-    NamedModulesPlugin {
-      "options": Object {},
-    },
-    NamedChunksPlugin {
-      "nameResolver": [Function],
-    },
-    CommonsChunkPlugin {
-      "async": undefined,
-      "children": undefined,
-      "chunkNames": Array [
-        "vendor",
-      ],
-      "deepChildren": undefined,
-      "filenameTemplate": undefined,
-      "ident": "/projects/neutrino-middlewares/node_modules/webpack/lib/optimize/CommonsChunkPlugin.js0",
-      "minChunks": Infinity,
-      "minSize": undefined,
-      "selectedChunks": undefined,
-    },
-    CommonsChunkPlugin {
-      "async": undefined,
-      "children": undefined,
-      "chunkNames": Array [
-        "runtime",
-      ],
-      "deepChildren": undefined,
-      "filenameTemplate": undefined,
-      "ident": "/projects/neutrino-middlewares/node_modules/webpack/lib/optimize/CommonsChunkPlugin.js1",
-      "minChunks": undefined,
-      "minSize": undefined,
-      "selectedChunks": undefined,
-    },
-    NameAllModulesPlugin {},
-    ModuleConcatenationPlugin {
-      "options": Object {},
     },
     CleanWebpackPlugin {
       "options": Object {
@@ -680,7 +651,7 @@ Object {
         "include": undefined,
         "parallel": true,
         "sourceMap": true,
-        "test": /\\\\\\.js\\$/i,
+        "test": /\\\\\\.js\\(\\\\\\?\\.\\*\\)\\?\\$/i,
         "uglifyOptions": Object {
           "compress": Object {
             "comparisons": false,
@@ -697,6 +668,7 @@ Object {
         },
         "warningsFilter": [Function],
       },
+      "sourceMapsCache": WeakMap {},
     },
   ],
   "resolve": Object {

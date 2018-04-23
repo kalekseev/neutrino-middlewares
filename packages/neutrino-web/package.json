@@ -26,7 +26,6 @@
   "dependencies": {
     "@kotify/neutrino-style-loader": "^0.1.4",
     "@kotify/neutrino-utils": "^0.1.2",
-    "@neutrinojs/chunk": "^8.1.1",
     "@neutrinojs/clean": "^8.1.1",
     "@neutrinojs/compile-loader": "^8.1.1",
     "@neutrinojs/copy": "^8.1.1",
@@ -39,9 +38,10 @@
     "@neutrinojs/image-loader": "^8.1.1",
     "@neutrinojs/loader-merge": "^8.1.1",
     "deepmerge": "^2.0.1",
-    "webpack": "^3.10.0",
+    "html-webpack-include-sibling-chunks-plugin": "^0.1.4",
+    "webpack": "^4.6.0",
     "webpack-manifest-plugin": "^1.3.2",
-    "webpack-sources": "1.0.1",
+    "webpack-sources": "1.1.0",
     "worker-loader": "^1.0.0"
   },
   "peerDependencies": {
